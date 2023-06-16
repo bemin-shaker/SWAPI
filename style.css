@@ -115,3 +115,25 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+dialog {
+    background-color: #e8e7e5;
+    min-width: 60vw;
+    min-height: 40vh;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.vehicle-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: translateX(-10px);
+}
+
+.vehicle-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}

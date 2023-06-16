@@ -10,6 +10,9 @@ const getPeople = async (page) => {
   characterList.innerHTML = "";
   posts.results.forEach((item) => {
     const randomId = Math.floor(Math.random() * 1000000);
+    const randomVehicleId = Math.floor(Math.random() * 1000000);
+    const vehicles = item.vehicles;
+
     characterList.innerHTML += `
     <div class="character-item"> 
       <h1 class="char-name">${item.name}</h1>
@@ -27,11 +30,41 @@ const getPeople = async (page) => {
       </div>
 
       <dialog id=${randomId}>
-        <p>${item.name} </p>
-        <button class="close" onclick="document.getElementById('${randomId}').close()">Ok</button>
+        <h1 class="char-name">${item.name}<span id="light-logo"> Vehicles</span></h1>
+        <div class="vehicle-container" id=${randomVehicleId}></div>
+        <button class="close more-info-btn" onclick="document.getElementById('${randomId}').close()">Ok</button>
       </dialog>
     </div>
     `;
+
+    if (vehicles.length === 0) {
+      document.getElementById(randomVehicleId).innerHTML += `
+      <div class="character-item">
+        <h3 class="vehicle-name">No vehicles found for this character.</h3>
+      </div>
+      `;
+    }
+
+    vehicles.forEach((vehicle) => {
+      fetch(vehicle)
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById(randomVehicleId).innerHTML += `
+          <div class="character-item"> 
+            <h3 class="vehicle-name">${data.name}</h3>
+            <p><strong>Model:</strong> ${data.model}</p>
+            <p><strong>Manufacturer:</strong> ${data.manufacturer}</p>
+            <p><strong>Cost:</strong> ${data.cost_in_credits}</p>
+            <p><strong>Length:</strong> ${data.length}</p>
+            <p><strong>Max Speed:</strong> ${data.max_atmosphering_speed}</p>
+            <p><strong>Crew:</strong> ${data.crew}</p>
+            <p><strong>Passengers:</strong> ${data.passengers}</p>
+            <p><strong>Cargo Capacity:</strong> ${data.cargo_capacity}</p>
+            <p><strong>Vehicle Class:</strong> ${data.vehicle_class}</p>
+          </div>
+          `;
+        });
+    });
   });
 
   return posts.count;
