@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800&display=swap');
 
 body {
     background-color: #e8e7e5;
-    padding: 25px 50px;
+    padding: 20px 50px;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
     font-weight: 800;
-    margin: 10px;
+    margin: 15px 10px;
 }
 
 #light-logo {
@@ -37,7 +38,9 @@ body {
 .character-item p {
     margin-top: 5px;
     margin-bottom: 10px;
-    color: #484949
+    color: #484949;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .char-name {
@@ -45,6 +48,20 @@ body {
     margin-bottom: 10px;
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.more-info-btn {
+    background-color: #e5bf25;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border-width: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.more-info-btn:hover {
+    background-color: #f2cf44;
 }
 
 .pagination li {
@@ -67,7 +84,8 @@ body {
 .pagination li a {
     color: #000000;
     text-decoration: none;
-    list-style-type: none
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .pagination {

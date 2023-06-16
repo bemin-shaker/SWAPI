@@ -8,16 +8,28 @@ const getPeople = async (page) => {
   const response = await fetch(`https://swapi.dev/api/people/?page=${page}`);
   const posts = await response.json();
   characterList.innerHTML = "";
-  posts.results.forEach((post) => {
+  posts.results.forEach((item) => {
+    const randomId = Math.floor(Math.random() * 1000000);
     characterList.innerHTML += `
     <div class="character-item"> 
-      <h1 class="char-name">${post.name}</h1>
-      <p><strong>Height:</strong> ${post.height}</p>
-      <p><strong>Mass:</strong> ${post.mass}</p>
-      <p><strong>Gender:</strong> ${post.gender}</p>
-      <p><strong>Birth Year:</strong> ${post.birth_year}</p>
-      <p><strong>Hair Color:</strong> ${post.hair_color}</p>
-      <p><strong>Eye Color:</strong> ${post.eye_color}</p>
+      <h1 class="char-name">${item.name}</h1>
+      <p><strong>Height:</strong> ${item.height}</p>
+      <p><strong>Mass:</strong> ${item.mass}</p>
+      <p><strong>Gender:</strong> ${item.gender}</p>
+      <p><strong>Birth Year:</strong> ${item.birth_year}</p>
+      <p><strong>Hair Color:</strong> ${item.hair_color}</p>
+      <p><strong>Eye Color:</strong> ${item.eye_color}</p>
+      
+      <div class="button-container">
+        <button class="more-info-btn" onclick="document.getElementById('${randomId}').showModal()">
+          More Info
+        </button> 
+      </div>
+
+      <dialog id=${randomId}>
+        <p>${item.name} </p>
+        <button class="close" onclick="document.getElementById('${randomId}').close()">Ok</button>
+      </dialog>
     </div>
     `;
   });
