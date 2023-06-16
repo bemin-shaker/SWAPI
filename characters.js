@@ -6,9 +6,9 @@ let pageNumber = 1;
 const getPeople = async (page) => {
   characterList.innerHTML = `<div class="loader-container"><div class="loader"></div></div>`;
   const response = await fetch(`https://swapi.dev/api/people/?page=${page}`);
-  const posts = await response.json();
+  const characters = await response.json();
   characterList.innerHTML = "";
-  posts.results.forEach((item) => {
+  characters.results.forEach((item) => {
     const randomId = Math.floor(Math.random() * 1000000);
     const randomVehicleId = Math.floor(Math.random() * 1000000);
     const vehicles = item.vehicles;
@@ -67,7 +67,7 @@ const getPeople = async (page) => {
     });
   });
 
-  return posts.count;
+  return characters.count;
 };
 
 getPeople(1);
