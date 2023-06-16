@@ -18,7 +18,7 @@ No dependencies are needed as this application was developed in pure JavaScript 
 
 ## Reflection
 
-What really excites me about joining the Platform Integration & Automation team at Stevens is the fact that I will get the opportunity to work with a variety of technologies including Workday and Okta. These services have significantly improved the digital experience and security at Stevens. Having been a student for the past four years, I understand how vital the work that the IT department does in shaping the overall experience of the student body while also helping maintain security, and protecting valuable data and research that is created and shared on a daily basis. I want to be able to use what I have already learned while also be challenged to learn new concepts. I believe the position of Platform Engineer would allow me to do that.
+What really excites me about joining the Platform Integration & Automation team at Stevens is the fact that I will get the opportunity to work with a variety of web technologies and also third-party services including Workday and Okta. These services have significantly improved the digital experience and security at Stevens. Having been a student for the past four years, I understand how vital the work that the IT department does in shaping the overall experience of the student body while also helping maintain security, and protecting valuable data and research that is created and shared on a daily basis. I want to be able to use what I have already learned while also be challenged to learn new concepts. I believe the position of Platform Engineer would allow me to do that.
 
 ## Author
 
