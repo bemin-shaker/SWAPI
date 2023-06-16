@@ -4,7 +4,7 @@ Developed with JavaScript, HTML, and CSS.
 
 ## Description
 
-Using the API at swapi.dev, this application displays a paginated list of Star Wars characters. Clicking on a character provides a list of vehicles that they are associated with.
+Using the API at swapi.dev, this application displays a paginated list of Star Wars characters. Clicking on a character provides a list of vehicles they are associated with.
 
 ## Getting Started
 
